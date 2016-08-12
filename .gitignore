@@ -1,0 +1,10 @@
+.DS_Store
+node_modules/
+.idea
+.travis.yml
+Gruntfile.js
+package.json
+bin
+.editorconfig
+phpunit.xml.dist
+tests
