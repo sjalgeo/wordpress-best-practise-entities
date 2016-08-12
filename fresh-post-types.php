@@ -12,7 +12,9 @@
  */
 
 
+require_once ('vendor/autoload.php');
 require_once ('lib/activate.php');
+require_once ('lib/wordpress-client.php');
 require_once ('lib/post-manager.php');
 require_once ('side.php');
 

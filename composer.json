@@ -1,0 +1,11 @@
+{
+  "repositories": [
+    {
+      "type": "git",
+      "url": "https://github.com/careybaird/fresh-amazon-client.git"
+    }
+  ],
+  "require": {
+    "careybaird/fresh-amazon-client": "dev-master"
+  }
+}

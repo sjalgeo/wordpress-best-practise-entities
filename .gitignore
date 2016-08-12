@@ -8,3 +8,5 @@ bin
 .editorconfig
 phpunit.xml.dist
 tests
+vendor
+composer.lock
