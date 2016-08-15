@@ -13,10 +13,11 @@ use FreshAmazonClient\Request\Search;
 
 function fetch_from_amazon() {
 
+	$api_key = get_option('FRESH_AMAZON_KEY');
+	$api_secret = get_option('FRESH_AMAZON_SECRET');
+	$api_tag = get_option('FRESH_AMAZON_TAG');
 
-	Product_Manager::delete_all();
-
-	$credentials = new \FreshAmazonClient\Credentials('AKIAJIBA25K5AQRIKYJQ', 'WiUnkQ3kZiRZwtBTPxwIu8Bhm15eV3WVu3sWvIs4', 'azn2020-20');
+	$credentials = new \FreshAmazonClient\Credentials($api_key, $api_secret, $api_tag);
 
 
 	$client = new \FreshAmazonClient\Client\WordpressClient();
@@ -26,8 +27,10 @@ function fetch_from_amazon() {
 
 
 	$results = $search->itemSearch('funko');
+//	sja_debug($results);
 	$results = $results->getBodyAsArray();
 	$results = $results['Items']['Item'];
+	sja_debug($results);
 
 	foreach ($results as $product)
 	{
