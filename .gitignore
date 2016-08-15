@@ -10,3 +10,4 @@ phpunit.xml.dist
 tests
 vendor
 composer.lock
+dev.php

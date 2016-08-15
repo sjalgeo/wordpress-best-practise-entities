@@ -2,6 +2,7 @@
 
 namespace Fresh_Core_WP_Test;
 
+use FreshAmazonClient\Locale\Locale;
 use \WP_Query;
 
 class Product_Manager {
@@ -43,6 +44,10 @@ class Product_Manager {
 		add_post_meta( $post_id, 'vendor_id', $raw_data['ASIN'] );
 		add_post_meta( $post_id, 'title', $raw_data['ItemAttributes']['Title']);
 		add_post_meta( $post_id, 'detail_page_url', $raw_data['DetailPageURL']);
+		add_post_meta( $post_id, 'large_image', $raw_data['SmallImage']['URL']);
+		add_post_meta( $post_id, 'price', $raw_data['OfferSummary']['LowestNewPrice']['Amount']);
+
+//		sja_debug($raw_data);
 
 		return $post_id;
 	}
