@@ -13,16 +13,15 @@
 
 
 require_once ('vendor/autoload.php');
-require_once ('lib/activate.php');
 require_once ('lib/wordpress-client.php');
 require_once ('lib/product-manager.php');
-require_once ('shortcode/product.php');
+//require_once ('shortcode/product.php');
 require_once ('side.php');
 
-use Fresh_Core_WP_Test\Controllers\Setup_Controller;
+//use Fresh_Core_WP_Test\Controllers\Setup_Controller;
 
 //$shortcode = new Fresh_Core_WP_Test\Shortcode\Product();
-$activate = new Setup_Controller();
+//$activate = new Setup_Controller();
 
-$activate->run();
+//$activate->run();
 //$shortcode->run();
