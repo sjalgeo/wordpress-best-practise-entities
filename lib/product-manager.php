@@ -37,7 +37,7 @@ class Product_Manager {
 
 		$post_id = wp_insert_post( $product, true );
 
-		$term_vendor = get_term_by('slug', 'amazon-usa', 'fresh_vendor')->term_id;
+		$term_vendor = get_term_by('slug', $locale->get_vendor_slug(), 'fresh_vendor')->term_id;
 
 		wp_set_object_terms( $post_id, $term_vendor, 'fresh_vendor' );
 
